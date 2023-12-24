@@ -2,7 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
 :root {
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -17,11 +21,27 @@
 }
 
 body {
+  overflow: hidden;
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: hsla(0, 0%, 0%, 1);
+  background-image: radial-gradient(
+      at 73% 95%,
+      hsla(258, 0%, 0%, 1) 0px,
+      transparent 50%
+    ),
+    radial-gradient(at 4% 88%, hsla(259, 0%, 0%, 1) 0px, transparent 50%),
+    radial-gradient(at 50% 1%, hsla(259, 0%, 0%, 1) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(259, 48%, 35%, 1) 0px, transparent 50%),
+    radial-gradient(at 0% 39%, hsla(260, 50%, 35%, 1) 0px, transparent 50%),
+    radial-gradient(at 18% 100%, hsla(242, 100%, 70%, 1) 0px, transparent 50%);
+}
+
+.follower {
+  transition: 0.1s;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #3498db;
+  border-radius: 50%;
+  pointer-events: none;
 }
