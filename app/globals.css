@@ -18,17 +18,16 @@ body {
 }
 
 main {
-  background-color: hsla(0, 0%, 0%, 1);
+  background-color: hsla(131, 0%, 0%, 1);
   background-image: radial-gradient(
-      at 0% 100%,
-      hsla(240, 0%, 0%, 1) 0px,
+      at 51% 80%,
+      hsla(197, 0%, 0%, 1) 0px,
       transparent 50%
     ),
-    radial-gradient(at 67% 100%, hsla(258, 0%, 0%, 1) 0px, transparent 50%),
-    radial-gradient(at 0% 0%, hsla(258, 0%, 0%, 1) 0px, transparent 50%),
-    radial-gradient(at 52% 0%, hsla(259, 0%, 0%, 1) 0px, transparent 50%),
-    radial-gradient(at 86% 0%, hsla(260, 50%, 35%, 1) 0px, transparent 50%),
-    radial-gradient(at 0% 100%, hsla(260, 49%, 35%, 1) 0px, transparent 50%);
+    radial-gradient(at 100% 100%, hsla(37, 0%, 0%, 1) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, hsla(255, 81%, 60%, 0.6) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsla(255, 81%, 60%, 0.52) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(255, 81%, 60%, 0.4) 0px, transparent 50%);
 }
 
 .follower {

@@ -7,25 +7,46 @@ export default function Navbar() {
   return (
     <>
       <nav className="w-full flex justify-between items-center py-6 px-10 md:px-40 fixed z-30">
-        <Image
-          src="/logo.png"
-          alt="woi"
-          width={50}
-          height={40}
-          className="rounded-full"
-        />
+        <div className="flex gap-2 items-center">
+          {/* <Image
+            src="/logo.png"
+            alt="woi"
+            width={512}
+            height={512}
+            className="rounded-full w-14 h-1/2"
+          /> */}
+          <Image
+            src="/logo-text.png"
+            alt="woi"
+            width={200}
+            height={100}
+            className="w-1/3 h-1/3"
+          />
+        </div>
         <div className="flex items-center gap-10">
           <div className="hidden md:flex gap-4 items-center">
-            <a className="hover:border-b-4 px-4 py-1 border-purple" href="">
+            <a
+              className="hover:border-b-4 px-4 py-1 border-purple transition duration-200"
+              href=""
+            >
               Home
             </a>
-            <a className="hover:border-b-4 px-4 py-1 border-purple" href="">
+            <a
+              className="hover:border-b-4 px-4 py-1 border-purple transition duration-200"
+              href=""
+            >
               About
             </a>
-            <a className="hover:border-b-4 px-4 py-1 border-purple" href="">
+            <a
+              className="hover:border-b-4 px-4 py-1 border-purple transition duration-200"
+              href=""
+            >
               Deals
             </a>
-            <a className="hover:border-b-4 px-4 py-1 border-purple" href="">
+            <a
+              className="hover:border-b-4 px-4 py-1 border-purple transition duration-200"
+              href=""
+            >
               Promo
             </a>
           </div>

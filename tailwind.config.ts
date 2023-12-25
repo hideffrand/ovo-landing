@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       colors: {
         'purple': '#6e3ef5',
-        // 'soft-purple': '#8f84b7',
+        'soft-purple': '#8f84b7',
         // 'dark-purple': '#34205f'
       }
     },
