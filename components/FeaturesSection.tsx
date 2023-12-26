@@ -48,14 +48,14 @@ export default function FeaturesSection() {
           height={1000}
           className="hidden md:block w-1/3 z-0 floating-element absolute right-0 mr-40 transition duration-200"
         />
-        <div className="w-full md:w-1/2 flex flex-col justify-center items-center gap-10 relative z-10">
+        <div className="w-full md:w-1/2 flex flex-col justify-center items-center relative z-10">
           <p className="text-gray-400">
             Mau tahu apa saja yang bisa dilakukan dengan OVO? Anda bisa:
           </p>
           {features.map((feature, i) => (
             <div
               key={i}
-              className="w-full pb-10 border-b"
+              className="w-full py-10 border-b"
               onMouseEnter={() => {
                 setShowDesc(i);
                 setCurrImg(feature.img);
@@ -68,7 +68,7 @@ export default function FeaturesSection() {
             >
               <h1 className="text-2xl text-white">
                 <span className="text-2xl font-bold bg-gradient-to-r from-purple to-soft-purple inline text-transparent bg-clip-text">
-                  {i + 1}.
+                  {i + 1}.{" "}
                 </span>
                 {feature.title}
               </h1>
