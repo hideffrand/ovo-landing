@@ -8,13 +8,6 @@ export default function Navbar() {
     <>
       <nav className="w-full flex justify-between items-center py-6 px-10 md:px-40 fixed z-30">
         <div className="flex gap-2 items-center">
-          {/* <Image
-            src="/logo.png"
-            alt="woi"
-            width={512}
-            height={512}
-            className="rounded-full w-14 h-1/2"
-          /> */}
           <Image
             src="/logo-text.png"
             alt="woi"
@@ -27,27 +20,27 @@ export default function Navbar() {
           <div className="hidden md:flex gap-4 items-center">
             <a
               className="hover:border-b-4 px-4 py-1 border-purple transition duration-200"
-              href=""
+              href="#home"
             >
               Home
             </a>
             <a
               className="hover:border-b-4 px-4 py-1 border-purple transition duration-200"
-              href=""
+              href="#features"
             >
-              About
+              Features
             </a>
             <a
               className="hover:border-b-4 px-4 py-1 border-purple transition duration-200"
-              href=""
+              href="#footer"
             >
-              Deals
+              Information
             </a>
             <a
               className="hover:border-b-4 px-4 py-1 border-purple transition duration-200"
-              href=""
+              href="#footer"
             >
-              Promo
+              Help
             </a>
           </div>
           <div className="hidden md:block">
@@ -83,21 +76,21 @@ export default function Navbar() {
               <a
                 className="pb-2 border-b w-full hover:border-purple"
                 onClick={() => setSidebar(!sidebar)}
-                href="#about"
+                href="#features"
               >
-                About
+                Features
               </a>
               <a
                 className="pb-2 border-b w-full hover:border-purple"
                 onClick={() => setSidebar(!sidebar)}
-                href=""
+                href="#footer"
               >
-                Benefits
+                Information
               </a>
               <a
                 className="pb-2 border-b w-full hover:border-purple"
                 onClick={() => setSidebar(!sidebar)}
-                href=""
+                href="#footer"
               >
                 Help
               </a>

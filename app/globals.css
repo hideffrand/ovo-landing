@@ -91,3 +91,20 @@ main {
   box-shadow: #6e3ef5 0 3px 7px inset;
   transform: translateY(2px);
 }
+
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.floating-element {
+  animation: floating 3s ease-in-out infinite;
+}

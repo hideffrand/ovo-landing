@@ -3,7 +3,8 @@
 import { useRef, useEffect, useCallback } from "react";
 import Image from "next/image";
 import Navbar from "../components/Navbar";
-import FollowerDiv from "@/components/FollowerDiv";
+import Footer from "@/components/Footer";
+import FeaturesSection from "@/components/FeaturesSection";
 
 export default function Home() {
   const imgLeftRef = useRef<HTMLImageElement | null>(null);
@@ -26,17 +27,24 @@ export default function Home() {
   }, [imgLeftRef, imgRightRef]);
 
   useEffect(() => {
-    document.addEventListener("scroll", handleScroll);
+    // Make the scroll event only happend on pc
+    const isPC = window.innerWidth > 768;
+    if (isPC) {
+      document.addEventListener("scroll", handleScroll);
 
-    return () => {
-      document.removeEventListener("scroll", handleScroll);
-    };
+      return () => {
+        document.removeEventListener("scroll", handleScroll);
+      };
+    }
   }, [handleScroll]);
 
   return (
     <>
       <Navbar />
-      <main className="flex w-full h-auto flex-col items-center justify-between px-6 md:px-24 py-40 md:py-52">
+      <main
+        id="home"
+        className="flex w-full h-auto flex-col items-center justify-between px-6 md:px-24 py-40 md:py-52"
+      >
         <h1 className="text-4xl md:text-7xl text-center md:translate-y-0">
           Dompet
           <span className="bg-gradient-to-r from-purple to-soft-purple inline text-transparent bg-clip-text">
@@ -72,8 +80,8 @@ export default function Home() {
           <Image
             src="/qr-screen.jpg"
             alt="woi"
-            width={300}
-            height={100}
+            width={500}
+            height={500}
             ref={imgLeftRef}
             className="rounded-lg w-1/4 md:rounded-2xl"
             loading="lazy"
@@ -81,22 +89,22 @@ export default function Home() {
           <Image
             src="/mock-main.png"
             alt="woi"
-            width={300}
-            height={300}
+            width={500}
+            height={500}
             className="z-10 absolute w-1/3 filter drop-shadow-lg"
             priority={true}
           />
           <Image
             src="/topup-screen.jpg"
             alt="woi"
-            width={300}
-            height={300}
+            width={500}
+            height={500}
             ref={imgRightRef}
             className="w-1/4 rounded-lg md:rounded-2xl"
             loading="lazy"
           />
         </div>
-        <div className="md:mb-40 text-center w-full flex flex-col items-center gap-4">
+        <div className="mb-40 text-center w-full flex flex-col items-center gap-4">
           <h1 className="text-xl md:text-4xl font-bold">
             All in{" "}
             <span className="text-transparent bg-gradient-to-r from-purple to-soft-purple inlne bg-clip-text">
@@ -109,22 +117,15 @@ export default function Home() {
             tanpa batas dan alur pembayaran yang cepat, tanpa repot!
           </p>
         </div>
-        <p className="animate-bounce text-xl translate-y-10 mt-20">
+        <a
+          href="#features"
+          className="animate-bounce text-xl bg-gray-300 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border border-gray-100 p-2 px-4 shadow-md hover:rounded-md hover:shadow-purple transition duration-200 ease-in-out cursor-pointer"
+        >
           Learn more
-        </p>
+        </a>
       </main>
-      <div className="relative w-full p-20">
-        <FollowerDiv />
-        <div className="w-full h-screen p-20 text-center top-10 bg-transparent relative">
-          <h1 className="text-7xl">Benefit</h1>
-        </div>
-        <div className="w-full h-screen p-20 text-center sticky top-0 z-10 bg-purple">
-          <h1 className="text-7xl">ok</h1>
-        </div>
-        <div className="w-full h-screen p-20 text-center relative z-20 bg-white">
-          <h1 className="text-7xl">ok</h1>
-        </div>
-      </div>
+      <FeaturesSection />
+      <Footer />
     </>
   );
 }
